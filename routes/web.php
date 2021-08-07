@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PostsController@index');
-Route::post('/posts/getdata', 'PostsController@getData');
-Route::get('/posts/edit/{id}', 'PostsController@editPosts');
-Route::post('/posts/save', 'PostsController@savePosts');
+Route::get('/import', 'UserController@importData');
+Route::get('/companylist/{minage}/{maxage}', 'UserController@getData');
+Route::get('/posts/edit/{id}', 'UserController@editPosts');
+Route::get('/posts/save', 'UserController@savePosts');
